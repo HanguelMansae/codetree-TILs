@@ -21,7 +21,7 @@ int main() {
             }
         }
     }
-    if(dp[m] == INT_MAX){cout << -1;}
+    if(dp[m] == INT_MIN){cout << -1;}
     else{cout << dp[m];}
     return 0;
 }
