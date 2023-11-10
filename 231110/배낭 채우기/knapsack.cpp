@@ -30,7 +30,10 @@ int main() {
     }
     int ans = INT_MIN;
     for(int i = 1; i <= n; i++){
-        ans = max(ans, weightdp[i][m]);
+        for(int j =0 ; j <= m; j++){
+            ans = max(ans, weightdp[i][j]);
+        }
+        
     }
     cout << ans;
     return 0;
