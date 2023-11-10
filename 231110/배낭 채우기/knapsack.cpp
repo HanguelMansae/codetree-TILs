@@ -21,9 +21,11 @@ int main() {
     
     for(int i = 1; i <= n; i++){
         for(int j = 0; j <= m; j++){
-            if(j - item[i].first >= 0 && weightdp[i-1][j-item[i].second] != INT_MIN){
-                weightdp[i][j] = max(weightdp[i][j], weightdp[i-1][j - item[i].second] + item[i].second);
+            if(weightdp[i-1][j] != INT_MIN){weightdp[i][j] = max(weightdp[i][j], weightdp[i-1][j]);}
+            if(j - item[i].first >= 0 && weightdp[i-1][j-item[i].first] != INT_MIN){
+                weightdp[i][j] = max(weightdp[i][j], weightdp[i-1][j - item[i].first] + item[i].second);
             }
+         
         }
     }
     int ans = INT_MIN;
