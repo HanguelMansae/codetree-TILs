@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 bool dp[101][1001];
 int arr[101];
 int main() {
@@ -10,7 +10,7 @@ int main() {
         cin >> arr[i];
         m += arr[i];
     }
-    int m = 0;
+    
     for(int i =0 ; i < n; i++){
         dp[i][arr[i]] = true;
     }
