@@ -17,7 +17,7 @@ int main() {
     for(int i = 1;i < n; i++){
         for(int j = 0; j < 1001; j++){
             if(dp[i-1][j] == true){dp[i][j] = true;}
-            if(dp[i-1][j - arr[i]] == true){dp[i][j] = true;}
+            if(j - arr[i] >= 0 && dp[i-1][j - arr[i]] == true){dp[i][j] = true;}
         }
     }
     if(m %2 != 0){cout << "No";}
